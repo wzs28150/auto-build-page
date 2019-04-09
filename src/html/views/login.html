@@ -1,0 +1,23 @@
+<% var data = {
+  title: "cool web"
+}; %>
+<%= _.template(require('../includes/header.html'))(data) %>
+<main class="main page-animate background-3">
+  <article class="login wh-center" data-controller="login" style="background-image:url(img/banner.png)">
+    <div class="login-form white p_20 br_5">
+      <form>
+        <h2 class="text-center f-blue m_B20">进入工作台</h2>
+        <div class="login-item m_B20">
+          <label for="username">用户名:</label>
+          <input type="text" class="m_L10 br_4" id="username" name="username" autocomplete=off>
+        </div>
+        <div class="login-item m_B20">
+          <label for="password">密<span style="visibility: hidden;">密</span>码:</label>
+          <input type="password" class="m_L10 br_4" id="password" name="password" autocomplete=off>
+        </div>
+        <button type="button" class="blue f-white br_4" name="button">登陆</button>
+      </form>
+    </div>
+  </article>
+</main>
+<%= _.template(require('../includes/footer.html'))(data) %>

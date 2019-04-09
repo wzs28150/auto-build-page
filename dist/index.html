@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" type="image/png" href="favicon/favicon.png">
+  <link rel="stylesheet" href="css/lib/common.css">
+  <link rel="stylesheet" href="css/coolstyle.css">
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/lib/swiper.min.js"></script>
+  <script src="js/lib/jquery.nicescroll.js"></script>
+  <title>
+    cool web
+  </title>
+</head>
+
+<body>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-nopjax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+  <input type="checkbox" id="navshow">
+
+  <header class="black">
+    <div class="container">
+      <div class="logo">
+        <h2>cool web</h2>
+      </div>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="template.html">模板</a>
+        <a href="case.html">案例</a>
+        <a href="workspace.html">工作台</a>
+      </nav>
+      <label for="navshow" class="navbar wap">
+        <div class="menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"> </div>
+        </div>
+      </label>
+      <div class="shadow wap"></div>
+    </div>
+  </header>
+
+  <div class="loaders">
+    <div class="loader">
+      <div class="ball-clip-rotate-multiple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main page-animate background-3">
+    <article class="index" data-controller="index">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide wh-center" style="background-image:url(img/banner.png)">
+            <div>
+              <h1 data-swiper-parallax="-100">Cool web基础框架生成</h1>
+              <p data-swiper-parallax="-1500">响应框架生成工具</p>
+              <div class="btn" data-swiper-parallax="-3500">
+                <a class="start-btn" href="start.html">开始制作</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <div class="container">
+      <span class="fl">技术支持:<a data-ajax="no" href="http://www.hrbkcwl.com/">酷创网络</a></span>
+      <span class="fr">© 2019 cool Ltd. all right</span>
+    </div>
+  </footer>
+
+
+  <script src="js/cooljs.js"></script>
+</body>
+
+</html>

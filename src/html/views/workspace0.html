@@ -1,0 +1,43 @@
+<% var data = {
+  title: "cool web"
+}; %>
+<%= _.template(require('../includes/header.html'))(data) %>
+<main class="main page-animate background-3">
+  <article class="workspace" data-controller="workspace">
+    <div class="step-body container white m_T20 m_B20" id="myStep">
+      <div class="p_20">
+        <div class="step-header clearfix" style="">
+          <ul class="clearfix">
+            <li>
+              <p>头部设置</p>
+            </li>
+            <li>
+              <p>底部设置</p>
+            </li>
+            <li>
+              <p>侧栏设置</p>
+            </li>
+            <li>
+              <p>页面设置</p>
+            </li>
+            <li>
+              <p>生成程序包</p>
+            </li>
+          </ul>
+        </div>
+        <div class="step-content p_T20 p_B20">
+          <div class="step-list">头部设置</div>
+          <div class="step-list">底部设置</div>
+          <div class="step-list">侧栏设置</div>
+          <div class="step-list">页面设置</div>
+          <div class="step-list">生成程序包</div>
+        </div>
+        <button id="preBtn">上一步</button>
+        <button id="nextBtn">下一步</button>
+        <!-- <button id="goBtn">跳转的指定的步骤</button> -->
+      </div>
+    </div>
+
+  </article>
+</main>
+<%= _.template(require('../includes/footer.html'))(data) %>

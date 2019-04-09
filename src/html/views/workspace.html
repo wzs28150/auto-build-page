@@ -1,0 +1,25 @@
+<% var data = {
+  title: "cool web"
+}; %>
+<%= _.template(require('../includes/header.html'))(data) %>
+<main class="main page-animate background-3">
+  <article class="workspace" data-controller="workspace">
+    <section class="container works-list">
+      <div class="p_20 row">
+        <%= _.template(require('../includes/workspace/additem.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+        <%= _.template(require('../includes/workspace/item.html'))() %>
+      </div>
+    </section>
+  </article>
+</main>
+<%= _.template(require('../includes/footer.html'))(data) %>

@@ -1,0 +1,306 @@
+html {
+  height  : 100%;
+  overflow: hidden;
+  // scroll-behavior: auto;
+  // scroll-behavior: smooth;
+}
+
+body {
+  font-size  : $baseFontSize;
+  font-family: $font-stack;
+  // overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gray {
+  background-color: gray;
+}
+/* alert_player */
+
+.alert_player {
+  position: fixed;
+  top     : 0;
+  width   : 100%;
+  height  : 100%;
+  z-index : 99999999;
+
+  .bg {
+    width     : 100%;
+    height    : 100%;
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    background: rgba(0, 0, 0, .5);
+  }
+
+  .layer {
+    width        : 360px;
+    height       : 140px;
+    position     : absolute;
+    margin       : -60px 0 0 -180px;
+    left         : 50%;
+    top          : 50%;
+    background   : #fff;
+    border-radius: 10px;
+    text-align   : center;
+  }
+
+  .info {
+    height       : 50%;
+    line-height  : 360%;
+    border-bottom: 1px solid #ccc;
+    color        : #0a60ab;
+  }
+
+  .queren_btn {
+    background   : #0a60ab;
+    display      : inline-block;
+    padding      : 14px 60px;
+    margin       : 10px 0 0;
+    color        : #fff;
+    border-radius: 10px;
+  }
+}
+/*水平垂直居中*/
+.wh-center {
+  display            : -webkit-box;
+  display            : -ms-flexbox;
+  display            : -webkit-flex;
+  display            : flex;
+  -webkit-box-pack   : center;
+  -ms-flex-pack      : center;
+  justify-content    : center;
+  -webkit-box-align  : center;
+  -ms-flex-align     : center;
+  -webkit-align-items: center;
+  align-items        : center;
+}
+/*垂直居中*/
+.h-center {
+  display            : -webkit-box;
+  display            : -ms-flexbox;
+  display            : -webkit-flex;
+  display            : flex;
+  -webkit-box-align  : center;
+  -ms-flex-align     : center;
+  -webkit-align-items: center;
+  align-items        : center;
+}
+/*分组父级*/
+.felx-box {
+  display              : -webkit-box;
+  -webkit-box-orient   : horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-pack     : justify;
+  -webkit-box-align    : center;
+  display              : flex;
+  flex-flow            : row nowrap;
+  align-items          : left;
+}
+/*分组子级*/
+.felx-item {
+  -webkit-box-flex: 1;
+  flex-basis      : 1;
+  flex-grow       : 1;
+  flex-shrink     : 1;
+  flex            : 1 1 1;
+}
+/*pc*/
+
+.pc {
+  display: block!important;
+  @media screen and (max-width: 768px) {
+    display: none!important;
+  }
+}
+/*手机*/
+.wap {
+  display: none!important;
+  @media screen and (max-width: 768px) {
+    display: block!important;
+  }
+}
+/*container*/
+
+.container {
+  @include css-set($container-width);
+  margin  : 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-without-overflow {
+  @include css-set($container-width);
+  margin  : 0 auto;
+  position: relative;
+}
+
+.container-without-position {
+  @include css-set($container-width);
+  margin  : 0 auto;
+  overflow: hidden;
+}
+
+.container-without-all {
+  @include css-set($container-width);
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+main {
+  background-color: #efefef;
+  position        : relative;
+  z-index         : 1;
+  overflow        : hidden;
+  min-height      : calc(100vh - 120px);
+}
+
+strong {
+  font-weight: bold;
+}
+
+.er-banner {
+  background-position: center;
+  background-size    : cover;
+  background-color   : #007fff;
+  color              : #fff;
+  padding            : 100px 0;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.page-left {}
+
+.page-right {
+  &.fixed {
+    position   : fixed;
+    top        : 60px;
+    left       : 50%;
+    margin-left: 600px;
+    transform  : translateX(-100%);
+  }
+
+  ul {
+    background-color: #fff;
+    margin          : 20px 0;
+
+    li {
+      a {
+        padding: 20px;
+        display: block;
+      }
+    }
+  }
+}
+// 上一篇下一篇
+
+.pBn {
+  padding-bottom: 0!important;
+}
+
+.page_up_down {
+  height     : 46px;
+  line-height: 46px;
+  border-top : 1px solid #e2e9ec;
+  font-size  : 14px;
+
+  a {
+    display   : block;
+    float     : left;
+    width     : calc(50% - 25px);
+    transition: $tr4;
+
+    &:first-child {
+      text-align  : left;
+      padding-left: 25px;
+    }
+
+    &:last-child {
+      text-align   : right;
+      padding-right: 25px;
+    }
+
+    &:hover {
+      color     : #00a5e3;
+      transition: $tr4;
+    }
+  }
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 25px;
+
+  ul {
+    border       : 1px solid #e2e9ec;
+    display      : inline-block;
+    border-radius: 4px;
+    font-size    : 0;
+    line-height  : 0;
+    overflow     : hidden;
+
+    a {
+      display    : inline-block;
+      width      : 28px;
+      line-height: 28px;
+      font-size  : 14px;
+      border     : 1px solid #e2e9ec;
+      transition : $tr4;
+
+      &:first-child,
+      &:last-child {
+        width      : 58px;
+        line-height: 28px;
+      }
+
+      &.on,
+      &:hover {
+        background-color: #00a5e3;
+        color           : #fff;
+        border-color    : #00a5e3;
+        transition      : $tr4;
+      }
+    }
+  }
+}
+
+.code-lighter {
+  margin: 10px 0;
+
+  .code {
+    overflow-x: scroll;
+  }
+}
+
+table {
+  border-top     : 1pt solid #ebebeb;
+  border-left    : 1pt solid #ebebeb;
+  border-spacing : 0;
+  border-collapse: collapse;
+
+  tr {
+    &:first-child {
+      background : #eaf9ff;
+      color      : #000;
+      font-weight: bold;
+    }
+
+    td {
+      padding      : 10px 15px;
+      border-right : 1pt solid #ebebeb;
+      border-bottom: 1pt solid #ebebeb;
+    }
+  }
+}

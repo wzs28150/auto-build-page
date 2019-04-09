@@ -1,0 +1,25 @@
+<% var data = {
+  title: "cool web"
+}; %>
+<%= _.template(require('../includes/header.html'))(data) %>
+<main class="main page-animate background-3">
+  <article class="index" data-controller="index">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide wh-center" style="background-image:url(img/banner.png)">
+          <div>
+            <h1 data-swiper-parallax="-100">Cool web基础框架生成</h1>
+            <p data-swiper-parallax="-1500">响应框架生成工具</p>
+            <div class="btn" data-swiper-parallax="-3500">
+              <a class="start-btn" href="start.html">开始制作</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination swiper-pagination-white"></div>
+    </div>
+  </article>
+</main>
+<%= _.template(require('../includes/footer.html'))(data) %>

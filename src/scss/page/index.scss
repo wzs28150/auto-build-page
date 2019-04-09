@@ -1,0 +1,55 @@
+.index {
+  height: calc(100vh - 120px);
+
+  .swiper-container {
+    height          : 100%;
+    background-color: #007FFF;
+    color           : #fff;
+
+    .swiper-slide {
+      background-size    : contain;
+      background-position: center bottom;
+      background-repeat  : no-repeat;
+    }
+
+    h1 {
+      font      : italic bold 120px/100% Arial;
+      text-align: center;
+      // text-shadow: 0 0 10px #ccc;
+      @include css-set($h1);
+    }
+
+    p {
+      text-align    : center;
+      font          : normal 34px/400% microsoft yahei;
+      // text-shadow   : 1px 1px 0 #1A668E;
+      letter-spacing: 3px;
+      // text-shadow   : 0 0 10px #ccc;
+      @include css-set($p);
+    }
+
+    .btn {
+      margin    : 0 auto;
+      text-align: center;
+      font-size : 0;
+    }
+
+    .start-btn {
+      display      : inline-block;
+      padding      : 0.8rem 2rem;
+      color        : #fff;
+      border       : 1px solid #fff;
+      border-radius: 4px;
+      font-size    : 18px;
+      margin       : 0 20px;
+      transition   : $tr4;
+
+      &.on,
+      &:hover {
+        color           : #007fff;
+        background-color: #fff;
+        transition      : $tr4;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.login {
+  height          : 100%;
+  background-color: #007fff;
+  height          : calc(100vh - 120px);
+
+  .login-form {
+    width     : 280px;
+    box-shadow: 0 0 10px #fff;
+
+    .login-item {
+      line-height: 2em;
+
+      input {
+        background-color: #fff;
+        border          : 1px solid #ccc;
+        height          : 2em;
+        width           : 206px;
+        padding         : 0 2px;
+        outline         : none;
+        transition      : $tr4;
+
+        &:focus {
+          border    : 1px solid #007fff;
+          transition: $tr4;
+        }
+      }
+    }
+
+    button {
+      display    : block;
+      margin     : 0 auto;
+      border     : 0;
+      width      : 100%;
+      line-height: 2.5em;
+    }
+  }
+}
