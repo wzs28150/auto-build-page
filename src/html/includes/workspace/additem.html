@@ -1,9 +1,9 @@
 <div class="item additem col-md-3">
   <div class="box-row white">
     <div class="pic" style="">
-      <div class="bg  wh-center">
-        <a class="fa fa-plus" href="javascript:void(0);" data-nopjax="no"></a>
-      </div>
+      <a class="bg wh-center" id="showAddMask" href="javascript:void(0);" data-nopjax="no">
+        <i class="fa fa-plus"></i>
+      </a>
     </div>
     <div class="inner p_20">
       <div class="name">
@@ -12,4 +12,29 @@
       </div>
     </div>
   </div>
+</div>
+<div id="iziModal" class="iziModal">
+  <button data-iziModal-close class="icon-close fa fa-close"></button>
+  <div class="header">
+    <a href="javascript:void(0);" data-nopjax="no" id="signin">Sign in</a>
+    <a href="javascript:void(0);" data-nopjax="no" class="active">New Account</a>
+  </div>
+  <section class="hide">
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <div class="footer">
+      <button data-iziModal-close>Cancel</button>
+      <button class="submit">Log in</button>
+    </div>
+  </section>
+  <section>
+    <input type="text" placeholder="Username">
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <label for="check"><input type="checkbox" name="checkbox" id="check" value="1"> I agree to the <u>Terms</u>.</label>
+    <div class="footer">
+      <button data-iziModal-close>Cancel</button>
+      <button class="submit">Create Account</button>
+    </div>
+  </section>
 </div>

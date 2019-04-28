@@ -8,9 +8,10 @@
  * Date: 2019-04-4
  */
 
-import debug from '../components/debug/debug';// 控制台调试
+import debug from '../components/debug/debug'; // 控制台调试
 import Common from '../components/common/common';
 import stepBar from '../components/stepBar/stepBar';
+import '../components/iziModal/iziModal';
 export default class Workspace {
   constructor(setNavActive) {
     // 检查是否登陆
@@ -23,10 +24,59 @@ export default class Workspace {
   }
 
   index() {
+    this.addItemMaskShow();
+  }
+
+  addItemMaskShow() {
+    $("#iziModal").iziModal({
+      overlayClose: false,
+      width: 600,
+      autoOpen: false,
+      overlayColor: 'rgba(0, 0, 0, 0.6)',
+      onOpened: function () {
+        console.log('onOpened');
+      },
+      onClosed: function () {
+        console.log('onClosed');
+      }
+    });
+    $(document).on('click', '#showAddMask', function (event) {
+      event.preventDefault();
+      // let html = $('#modal-default').html();
+      // $('#modal-default').remove();
+      // $('<div id="modal-default" class="iziModal" >' + html + '</div>').appendTo("body");
+      $('#iziModal').iziModal('open');
+    });
+    $("#iziModal").on('click', '.header a', function (event) {
+      event.preventDefault();
+      var index = $(this).index();
+      $(this).addClass('active').siblings('a').removeClass('active');
+      $(this).parents("div").find("section").eq(index).removeClass('hide').siblings('section').addClass('hide');
+
+      if ($(this).index() === 0) {
+        $("#iziModal .iziModal-content .icon-close").css('background', '#ddd');
+      } else {
+        $("#iziModal .iziModal-content .icon-close").attr('style', '');
+      }
+    });
+
+    $("#iziModal").on('click', '.submit', function (event) {
+      event.preventDefault();
+
+      var fx = "wobble", //wobble shake
+        $modal = $(this).closest('.iziModal');
+
+      if (!$modal.hasClass(fx)) {
+        $modal.addClass(fx);
+        setTimeout(function () {
+          $modal.removeClass(fx);
+        }, 1500);
+      }
+    });
 
   }
 
-  step(){
+  step() {
     var step = $("#myStep").step();
     $("#preBtn").click(function (event) {
       var yes = step.preStep();

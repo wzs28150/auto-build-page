@@ -6,14 +6,15 @@
 // @import '/common/nprogress';
 // @import './includes/base';
 // @import './includes/mp';
+//@import './components/news';
 @import './includes/vars';
 @import './includes/fonts';
 @import './includes/mixins';
 @import './includes/color';
+@import './components/iziModal';
 @import './includes/ui';
 @import './common/header';
 @import './common/footer';
 @import './page/index';
 @import './page/login';
 @import './page/workspace';
-@import './components/news';

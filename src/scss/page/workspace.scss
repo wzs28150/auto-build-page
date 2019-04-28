@@ -1,7 +1,7 @@
 .step-body {
   position: relative;
 
-  .step-header {
+  .step-.header {
     width  : 100%;
     margin : 0 auto;
     display: none;
@@ -127,8 +127,112 @@
         .bg {
           visibility: visible;
           opacity   : 1;
+          color     : #fff;
+
+          i {
+            font-size: 20px;
+          }
         }
       }
     }
   }
+}
+
+#iziModal .iziModal-content .header {
+  background   : #eee;
+  margin-bottom: 10px;
+  overflow     : hidden;
+  border-radius: 3px 3px 0 0;
+}
+
+.hide {
+  display: none;
+}
+
+#iziModal .iziModal-content .header a {
+  display   : block;
+  float     : left;
+  width     : 50%;
+  padding   : 30px 25px 25px;
+  text-align: center;
+  background: #ddd;
+  color     : #999;
+}
+
+#iziModal .iziModal-content .header a.active {
+  background: #fff;
+  color     : #777;
+}
+
+#iziModal .iziModal-content section {
+  padding: 30px;
+}
+
+#iziModal .iziModal-content section button,
+#iziModal .iziModal-content section input:not([type=checkbox]) {
+  width        : 100%;
+  border-radius: 3px;
+  border       : 1px solid #ddd;
+  margin-bottom: 26px;
+  padding      : 15px;
+  font-size    : 14px;
+}
+
+#iziModal .iziModal-content section input:focus {
+  border-color: #28ca97;
+}
+
+#iziModal .iziModal-content section label[for=check] {
+  margin-bottom: 26px;
+  font-size    : 14px;
+  color        : #999;
+  display      : block;
+}
+
+#iziModal .iziModal-content section .footer {
+  overflow: hidden;
+}
+
+#iziModal .iziModal-content section button {
+  background: #28ca97;
+  color     : #fff;
+  margin    : 0;
+  border    : 0;
+  cursor    : pointer;
+  width     : 50%;
+  float     : left;
+}
+
+#iziModal .iziModal-content section button:hover {
+  opacity: 0.8;
+}
+
+#iziModal .iziModal-content section button:nth-child(1) {
+  border-radius: 3px 0 0 3px;
+  background   : #aaa;
+}
+
+#iziModal .iziModal-content section button:nth-child(2) {
+  border-radius: 0 3px 3px 0;
+}
+
+#iziModal .iziModal-content .icon-close {
+  background   : #fff;
+  margin-bottom: 10px;
+  position     : absolute;
+  right        : -8px;
+  top          : -8px;
+  font-size    : 14px;
+  border-radius: 50%;
+  width        : 30px;
+  height       : 30px;
+  box-shadow   : 0 0 2px #999;
+  border       : 0;
+  color        : #a9a9a9;
+  cursor       : pointer;
+}
+
+#iziModal .iziModal-content .icon-close:focus,
+#iziModal .iziModal-content .icon-close:hover {
+  color: #000;
 }
