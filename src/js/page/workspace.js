@@ -21,6 +21,10 @@ export default class Workspace {
     setNavActive(3);
     // 控制台输出信息 方便调试页面是否加载
     debug('workspace controller is load');
+    $('body').off("input propertychange", '#project_name').on("input propertychange", '#project_name', function () {
+      let e = $(this).val();
+      $('#project_path').val('/www/' + pinyin.getFullChars(e))
+    })
   }
 
   index() {
@@ -42,22 +46,11 @@ export default class Workspace {
     });
     $(document).on('click', '#showAddMask', function (event) {
       event.preventDefault();
+
       // let html = $('#modal-default').html();
       // $('#modal-default').remove();
       // $('<div id="modal-default" class="iziModal" >' + html + '</div>').appendTo("body");
       $('#iziModal').iziModal('open');
-    });
-    $("#iziModal").on('click', '.header a', function (event) {
-      event.preventDefault();
-      var index = $(this).index();
-      $(this).addClass('active').siblings('a').removeClass('active');
-      $(this).parents("div").find("section").eq(index).removeClass('hide').siblings('section').addClass('hide');
-
-      if ($(this).index() === 0) {
-        $("#iziModal .iziModal-content .icon-close").css('background', '#ddd');
-      } else {
-        $("#iziModal .iziModal-content .icon-close").attr('style', '');
-      }
     });
 
     $("#iziModal").on('click', '.submit', function (event) {

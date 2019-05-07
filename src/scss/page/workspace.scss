@@ -143,6 +143,12 @@
   margin-bottom: 10px;
   overflow     : hidden;
   border-radius: 3px 3px 0 0;
+  background   : #ddd;
+  text-align   : center;
+  color        : #999;
+  padding      : 30px 25px 25px;
+  font-size    : 18px;
+  font-weight  : bolder;
 }
 
 .hide {
@@ -152,7 +158,7 @@
 #iziModal .iziModal-content .header a {
   display   : block;
   float     : left;
-  width     : 50%;
+  width     : 100%;
   padding   : 30px 25px 25px;
   text-align: center;
   background: #ddd;

@@ -16,25 +16,16 @@
 <div id="iziModal" class="iziModal">
   <button data-iziModal-close class="icon-close fa fa-close"></button>
   <div class="header">
-    <a href="javascript:void(0);" data-nopjax="no" id="signin">Sign in</a>
-    <a href="javascript:void(0);" data-nopjax="no" class="active">New Account</a>
+    添加项目
   </div>
-  <section class="hide">
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
-    <div class="footer">
-      <button data-iziModal-close>Cancel</button>
-      <button class="submit">Log in</button>
-    </div>
-  </section>
   <section>
-    <input type="text" placeholder="Username">
-    <input type="text" placeholder="Email">
-    <input type="password" placeholder="Password">
+    <input type="text" id="project_name" placeholder="项目名称">
+    <input type="text" id="project_path" placeholder="项目目录">
+    <!-- <input type="password" placeholder="Password"> -->
     <label for="check"><input type="checkbox" name="checkbox" id="check" value="1"> I agree to the <u>Terms</u>.</label>
     <div class="footer">
-      <button data-iziModal-close>Cancel</button>
       <button class="submit">Create Account</button>
+      <button data-iziModal-close>Cancel</button>
     </div>
   </section>
 </div>

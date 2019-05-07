@@ -4,8 +4,9 @@
   height          : calc(100vh - 120px);
 
   .login-form {
-    width     : 280px;
-    box-shadow: 0 0 10px #fff;
+    width           : 280px;
+    background-color: #fefefe;
+    box-shadow      : 0 0 10px #fff;
 
     .login-item {
       line-height: 2em;
